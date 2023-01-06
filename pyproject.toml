@@ -1,0 +1,19 @@
+[project]
+name = "huge"
+version = "1.0.0"
+description = "Demo Python distribution package using pyproject.toml"
+authors = [
+  { name = "deepklim" },
+]
+readme = "README.md"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+exclude = ["tests*"]
+
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project.scripts]
+huge-cli = "huge.main:important"
